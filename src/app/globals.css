@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Fustat:wght@400;500;600;700&family=Noto+Kufi+Arabic:wght@300;400;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ertqa-dark: #071412;
+  --ertqa-green: #022b23;
+  --ertqa-gold: #fbddaf;
+  --ertqa-muted: #707c7a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #071412;
+  color: #ffffff;
+  font-family: 'Fustat', 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Lenis smooth scroll */
+html.lenis {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #071412;
+}
+::-webkit-scrollbar-thumb {
+  background: #fbddaf40;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #fbddaf80;
+}
+
+/* Utility */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #fbddaf 0%, #d4a665 50%, #fbddaf 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+}
+
+.section-glow {
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(251,221,175,0.06) 0%, transparent 70%);
+}
